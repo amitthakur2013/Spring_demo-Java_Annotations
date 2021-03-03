@@ -1,6 +1,7 @@
 package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component //(write the id for the bean)
@@ -9,6 +10,7 @@ public class TennisCoach implements Coach {
 	
 	//Field injection direct injection also to private one
 	@Autowired
+	@Qualifier("happyFortuneService") //for multiple beans specify the bean id
 	private FortuneService fortuneService;
 	
 	/*Costructor Injection*/
