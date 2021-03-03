@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 @Component //(write the id for the bean)
 public class TennisCoach implements Coach {
 	
+	
+	//Field injection direct injection also to private one
+	@Autowired
 	private FortuneService fortuneService;
 	
 	/*Costructor Injection*/
@@ -19,11 +22,12 @@ public class TennisCoach implements Coach {
 		
 	}
 	
-	@Autowired
+	// Setter injection using autowired annotation
+	/*@Autowired
 	public void setFortuneService(FortuneService fortuneService){
 		System.out.println("Tennis Coach: Inside setter method of fortune service dependency injection!");
 		this.fortuneService=fortuneService;
-	}
+	}*/
 
 	@Override 
 	public String getDailyWorkout() {
