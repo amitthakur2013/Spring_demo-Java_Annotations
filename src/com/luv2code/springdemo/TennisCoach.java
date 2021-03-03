@@ -10,7 +10,7 @@ public class TennisCoach implements Coach {
 	
 	//Field injection direct injection also to private one
 	@Autowired
-	@Qualifier("happyFortuneService") //for multiple beans specify the bean id
+	@Qualifier("randomFortuneService") //for multiple beans specify the bean id
 	private FortuneService fortuneService;
 	
 	/*Costructor Injection*/
