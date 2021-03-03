@@ -14,6 +14,11 @@ public class TennisCoach implements Coach {
 		fortuneService = theFortuneService;
 	}*/
 	
+	//define a default constructor
+	public TennisCoach() {
+		
+	}
+	
 	@Autowired
 	public void setFortuneService(FortuneService fortuneService){
 		this.fortuneService=fortuneService;
